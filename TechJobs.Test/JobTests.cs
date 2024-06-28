@@ -90,8 +90,10 @@ Job job = new Job(
         {
             Job job = new Job();
             string result = job.ToString();
-            string expected = $"{Environment.NewLine} ID:{job.Id}{Environment.NewLine} Name: Data not available {Environment.NewLine} Employer: Data not available {Environment.NewLine} Position Type: Data not available {Environment.NewLine} Core Competency: Data not available";
+            string expected =$"{Environment.NewLine}ID: {job.Id}{Environment.NewLine}Name: Data not available{Environment.NewLine}Employer: Data not available{Environment.NewLine}Location: Data not available{Environment.NewLine}Position Type: Data not available{Environment.NewLine}Core Competency: Data not available{Environment.NewLine}";
+            Assert.AreEqual(result, expected);
         }
+
     }
 }
 

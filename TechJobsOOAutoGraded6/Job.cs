@@ -50,7 +50,7 @@ namespace TechJobsOOAutoGraded6
         {
             string emptyField = "Data not available";
             string idString = $"ID: {Id}";
-            string nameString = $"Name: {(Name == "" ? emptyField : Name)}";
+            string nameString = $"Name: {(string.IsNullOrEmpty(Name) ? emptyField : Name)}";
             string employerString = $"Employer: {(EmployerName == null || EmployerName.Value == "" ? emptyField : EmployerName.Value)}";
             string employerLocationString = $"Location: {(EmployerLocation == null || EmployerLocation.Value == "" ? emptyField : EmployerLocation.Value)}";
             string jobTypeString = $"Position Type: {(JobType == null || JobType.Value == "" ? emptyField : JobType.Value)}";
